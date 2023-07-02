@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="Calendar.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="nav">
+                <ul class="nav-list nav-list-mobile">
+                    <li class="nav-item">
+                        <div class="mobile-menu">
+                            <span class="line line-top"></span>
+                            <span class="line line-middle"></span>
+                            <span class="line line-bottom"></span>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link nav-link-home"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link nav-link-time"></a>
+                    </li>
+                </ul>
+                <!-- /.nav-list nav-list-mobile -->
+                <ul class="nav-list nav-list-larger">
+                    <li class="nav-item nav-item-hidden">
+                        <a href="index.html" class="nav-link nav-link-home"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Candidate Profiles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Calendar.html" class="nav-link">Calendar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="NewCandidate.html" class="nav-link">+New Candidate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">My Account</a>
+                    </li>
+                </ul>
+            <!-- /.nav-list nav-list-larger -->
+            </nav>
+        </div>
+</header>
+
+<div class="Heading">
+  <div class="title">
+  <h3>Calendar<span</h3>
+</div>
+
+<div class="containerb">
+  <div class="calendar">
+    <div class="header">
+      <div class="month">July 2021</div>
+      <div class="btns">
+        <!-- today -->
+        <div class="btn today">
+          <i class="fas fa-calendar-day"></i>
+        </div>
+        <!-- previous month -->
+        <div class="btn prev">
+          <i class="fas fa-chevron-left"></i>
+        </div>
+        <!-- next month -->
+        <div class="btn next">
+          <i class="fas fa-chevron-right"></i>
+        </div>
+      </div>
+    </div>
+    <div class="weekdays">
+      <div class="day">Sun</div>
+      <div class="day">Mon</div>
+      <div class="day">Tue</div>
+      <div class="day">Wed</div>
+      <div class="day">Thu</div>
+      <div class="day">Fri</div>
+      <div class="day">Sat</div>
+    </div>
+    <div class="days">
+      <!-- render days with js -->
+    </div>
+  </div>
+</div>
+
+
+<div id="calendar"></div>
+<div id="eventForm">
+  <h2>Add Event</h2>
+  <input type="date" id="eventDate">
+  <input type="text" id="eventName" placeholder="Event Name">
+  <button onclick="addEvent()">Add</button>
+</div>
+
+<script src="Calendar.js"></script>
+</body>
+</html>
